@@ -1,3 +1,4 @@
+'use client'
 import React, { FC } from 'react'
 import HIW1img from '../../public/images/howwork1.png'
 import HIW2img from '../../public/images/howwork2.png'
@@ -49,103 +50,101 @@ const SectionHowItWork: FC<SectionHowItWorkProps> = ({
   data = DEMO_DATA,
 }) => {
   return (
-
-      <div
-        className={`nc-SectionHowItWork  ${className} bg-[#FAFAFC]  px-2 py-4 lg:py-40`}
-        data-nc-id="SectionHowItWork"
-      >
-        <Heading isCenter>How it works ?</Heading>
-        <div className="mt-20 overflow-hidden  grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px] max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pl-6 pt-6">
-            <div className="text-[#6115E7] flex items-center mb-2">
-              <PinDropIcon className="text-[#6115E7] mr-2" />
-              STEP 1
-            </div>
-            <h2 className="text-xl font-bold mb-4">Choose your Location</h2>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <div className="-mr-10 ml-10 mt-24">
-              <div className="mb-4  flex items-center border rounded-2xl px-2">
-                <SearchIcon className="text-gray-500 mr-2" />
-                <input
-                  type="text"
-                  placeholder="Bangalore"
-                  className="w-full outline-none  focus:ring-0 focus:border-transparent border-none"
-                />
-              </div>
-              <div className="border-t-2 border-l-2 pl-3 pt-3 rounded-tl-xl">
-                <div className="flex space-x-2">
-                  <button className="bg-[#6115E7] text-white px-6 py-[2px] rounded-full">
-                    All
-                  </button>
-                  <button className="border px-4 py-[3px] rounded-full">
-                    Desks
-                  </button>
-                  <button className="border px-4 py-[3px] rounded-full">
-                    Spaces
-                  </button>
-                  <button className="border px-4 py-[3px] rounded-full">
-                    Meeting
-                  </button>
-                </div>
-                <div className="mt-3 flex flex-row gap-4">
-                  <div className="bg-[#6115E70F] h-20 w-40 rounded-t-xl" />
-                  <div className="bg-[#6115E70F] h-20 w-40 rounded-t-xl" />
-                </div>
-              </div>
-            </div>
+    <div
+      className={`nc-SectionHowItWork  ${className} bg-[#FAFAFC]  px-2 py-4 lg:py-40`}
+      data-nc-id="SectionHowItWork"
+    >
+      <Heading isCenter>How it works ?</Heading>
+      <div className="mt-20 overflow-hidden  grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Card 1 */}
+        <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px] max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pl-6 pt-6">
+          <div className="text-[#6115E7] flex items-center mb-2">
+            <PinDropIcon className="text-[#6115E7] mr-2" />
+            STEP 1
           </div>
-
-          {/* Card 2 */}
-          <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px] max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pt-6 pl-6">
-            <div className="text-[#6115E7] flex items-center mb-2">
-              <TableRestaurantOutlinedIcon className="text-[#6115E7] mr-2" />
-              STEP 2
-            </div>
-            <h2 className="text-xl font-bold mb-4">Choose your space</h2>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <div className="pt-4 rounded-lg flex">
-              <Image
-                alt=""
-                className="w-[240px] -ml-5 mt-[5px] h-[245px] rounded-xl"
-                src={step21}
-              />
-              <Image
-                alt=""
-                className="w-[240px] h-[250px] -mt-10 -ml-20 rounded-xl"
-                src={step22}
+          <h2 className="text-xl font-bold mb-4">Choose your Location</h2>
+          <p className="text-gray-600 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod.
+          </p>
+          <div className="-mr-10 ml-10 mt-24">
+            <div className="mb-4  flex items-center border rounded-2xl px-2">
+              <SearchIcon className="text-gray-500 mr-2" />
+              <input
+                type="text"
+                placeholder="Bangalore"
+                className="w-full outline-none  focus:ring-0 focus:border-transparent border-none"
               />
             </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px]  max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pl-6 pt-6">
-            <div className="text-[#6115E7] flex items-center mb-2">
-              <TollOutlinedIcon className="text-[#6115E7] mr-2" />
-              STEP 3
-            </div>
-            <h2 className="text-xl font-bold mb-4">Pay Online or On-site</h2>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
-            </p>
-            <div className="w-full flex mt-20 justify-center items-center">
-              <Image
-                alt=""
-                className="w-[270px] h-[190px]  rounded-xl"
-                src={step3}
-              />
+            <div className="border-t-2 border-l-2 pl-3 pt-3 rounded-tl-xl">
+              <div className="flex space-x-2">
+                <button className="bg-[#6115E7] text-white px-6 py-[2px] rounded-full">
+                  All
+                </button>
+                <button className="border px-4 py-[3px] rounded-full">
+                  Desks
+                </button>
+                <button className="border px-4 py-[3px] rounded-full">
+                  Spaces
+                </button>
+                <button className="border px-4 py-[3px] rounded-full">
+                  Meeting
+                </button>
+              </div>
+              <div className="mt-3 flex flex-row gap-4">
+                <div className="bg-[#6115E70F] h-20 w-40 rounded-t-xl" />
+                <div className="bg-[#6115E70F] h-20 w-40 rounded-t-xl" />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Card 2 */}
+        <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px] max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pt-6 pl-6">
+          <div className="text-[#6115E7] flex items-center mb-2">
+            <TableRestaurantOutlinedIcon className="text-[#6115E7] mr-2" />
+            STEP 2
+          </div>
+          <h2 className="text-xl font-bold mb-4">Choose your space</h2>
+          <p className="text-gray-600 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod.
+          </p>
+          <div className="pt-4 rounded-lg flex">
+            <Image
+              alt=""
+              className="w-[240px] -ml-5 mt-[5px] h-[245px] rounded-xl"
+              src={step21}
+            />
+            <Image
+              alt=""
+              className="w-[240px] h-[250px] -mt-10 -ml-20 rounded-xl"
+              src={step22}
+            />
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="bg-white m-auto md:w-[220px] lg:w-[300px] xl:w-[400px]  max-w-[400px] h-[430px] overflow-hidden rounded-lg shadow-lg pl-6 pt-6">
+          <div className="text-[#6115E7] flex items-center mb-2">
+            <TollOutlinedIcon className="text-[#6115E7] mr-2" />
+            STEP 3
+          </div>
+          <h2 className="text-xl font-bold mb-4">Pay Online or On-site</h2>
+          <p className="text-gray-600 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod.
+          </p>
+          <div className="w-full flex mt-20 justify-center items-center">
+            <Image
+              alt=""
+              className="w-[270px] h-[190px]  rounded-xl"
+              src={step3}
+            />
+          </div>
+        </div>
       </div>
-   
+    </div>
   )
 
   return (

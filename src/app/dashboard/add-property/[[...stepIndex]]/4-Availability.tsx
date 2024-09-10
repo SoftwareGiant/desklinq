@@ -44,7 +44,7 @@ const PageAddListing9: FC<PageAddListing9Props> = () => {
       <div className="addListingDatePickerExclude">
         <DatePicker
           onChange={(date) => {
-            let newDates = []
+            let newDates: any[] = []
 
             if (!date) {
               return

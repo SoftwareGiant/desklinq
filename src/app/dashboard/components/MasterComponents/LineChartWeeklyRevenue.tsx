@@ -7,7 +7,7 @@ import FilterDropdown from './FilterDropdown'
 export interface LineChartWeeklyRevenueProps {}
 
 const LineChartWeeklyRevenue: FC<LineChartWeeklyRevenueProps> = () => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
   const [isLoading, setIsLoading] = useState(false)
   const [revenueData, setRevenueData] = useState<any>({})

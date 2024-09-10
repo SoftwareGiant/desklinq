@@ -19,7 +19,7 @@ import LoadingIndicator from '@/components/LoadingIndicator'
 export default function OfferingTable({ offId }: { offId: string }) {
   // console.log(offId);
   const [offeringData, setOfferingData] = useState<any[]>([])
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
   const filteredData = offeringData.filter((item: any) => item.id === offId)
   // console.log(filteredData)

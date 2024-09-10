@@ -16,7 +16,7 @@ const PageAddListing4: FC<PageAddListing4Props> = ({ inputs, setInputs }) => {
   const [addOfferings, setAddOfferings] = useState<string[]>([])
 
   const [offerings, setOfferings] = useState<any[]>([])
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const searchParams = useSearchParams()
 
   const getOfferingData = async () => {

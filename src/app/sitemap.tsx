@@ -2,12 +2,9 @@ import { MetadataRoute } from 'next'
 // import {connectTODatabase} from '@/utils/connectMongo.js'
 const { MongoClient } = require('mongodb')
 
-const uri =
-  'mongodb+srv://vidit:EQXSgLCiQKL08cZg@cluster0.eerngcr.mongodb.net/desklinq'
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+// prettier-ignore
+const uri = 'mongodb+srv://vidit:EQXSgLCiQKL08cZg@cluster0.eerngcr.mongodb.net/desklinq';
+const client = new MongoClient(uri)
 
 interface MyType {
   url: string
@@ -15,6 +12,7 @@ interface MyType {
   changeFrequency?: string
   priority?: number
 }
+
 export default async function sitemap() {
   try {
     await client.connect()
@@ -145,8 +143,8 @@ export default async function sitemap() {
       ...url,
     ]
 
+    // console.log('Offering URLs:', url)
     return sitemapEntries
-    console.log('Offering URLs:', url)
   } catch (error) {
     return `Error:${error}`
   } finally {

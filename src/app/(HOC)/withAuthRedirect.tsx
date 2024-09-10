@@ -1,18 +1,10 @@
 'use client'
 
 import { useAppDispatch, useAppSelector } from '@/redux/app/hooks'
-import { RootState } from '@/redux/app/store'
-import {
-  initialState,
-  updateRedirectURL,
-  updateToken,
-  updateUser,
-} from '@/redux/user/userSlice'
+import { updateToken, updateUser } from '@/redux/user/userSlice'
 import userService from '@/service/user.service'
-import { Route } from 'next'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import { useLocation } from 'react-use'
 
 const withAuthRedirect = (
   WrappedComponent: React.ComponentType<any>,
@@ -21,7 +13,7 @@ const withAuthRedirect = (
   const HocComponent = (props: any) => {
     const router = useRouter()
     const dispatch = useAppDispatch()
-    const userData = useAppSelector<RootState>((state: RootState) => state.userData)
+    const userData = useAppSelector((state) => state.userData)
     const pathname = usePathname()
 
     useEffect(() => {

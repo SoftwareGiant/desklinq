@@ -19,7 +19,7 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
   const searchParams = useSearchParams()
   const modal = searchParams?.get('modal')
   const redirectUrl: string = useAppSelector(
-    (state) => state.userData.redirectURL
+    (state: any) => state.userData.redirectURL
   )
   const propertyID = searchParams.get('propertyID')
 

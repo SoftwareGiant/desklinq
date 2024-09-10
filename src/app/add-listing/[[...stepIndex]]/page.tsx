@@ -27,7 +27,7 @@ const Page = ({
   searchParams?: { [key: string]: string | string[] | undefined }
 }) => {
   const [inputs, setInputs] = useState({})
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   let ContentComponent: React.ComponentType<PageAddListingProps> =
     PageAddListing1
 

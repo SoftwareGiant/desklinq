@@ -13,7 +13,7 @@ import { columns } from '../components/table/table'
 export interface MenuBarProps {}
 
 const MenuBar: FC<MenuBarProps> = () => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const token = userData.token.access?.token
   const [bookingData, setBookingData] = useState<{
     loading: boolean

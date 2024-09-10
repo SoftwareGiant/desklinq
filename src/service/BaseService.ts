@@ -17,7 +17,7 @@ class BaseService {
   // create a getHeaders method to return the headers
   getHeaders(): AxiosRequestHeaders {
     const token = this.getToken()
-    let parsedToken = null
+    let parsedToken: any | null = null
     try {
       parsedToken = token ? JSON.parse(token) : null
     } catch (error) {

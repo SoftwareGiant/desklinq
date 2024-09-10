@@ -28,8 +28,10 @@ const initialState = {
 
 const MyBookings = () => {
   let [categories] = useState(['Current', 'Past', 'Cancelled'])
-  const userData = useAppSelector((state) => state.userData.user)
-  const token = useAppSelector((state) => state.userData.token.access?.token)
+  const userData = useAppSelector((state: any) => state.userData.user)
+  const token = useAppSelector(
+    (state: any) => state.userData.token.access?.token
+  )
   const [bookingsData, setBookingData] =
     useState<InitialStateTypes>(initialState)
   const [refreshData, setRefreshData] = useState(false)

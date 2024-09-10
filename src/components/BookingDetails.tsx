@@ -34,7 +34,7 @@ export default function BookingDetails({
   const [rowsPerPage, setRowsPerPage] = useState(5)
   const [data, setData] = useState<any[]>([])
 
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   // console.log(userData);
   const token = userData.token.access?.token
   const [bookingData, setBookingData] = useState<{

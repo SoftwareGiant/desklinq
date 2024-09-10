@@ -1,3 +1,4 @@
+'use client'
 import React, { FC } from 'react'
 import { TaxonomyType } from '@/data/types'
 import convertNumbThousand from '@/utils/convertNumbThousand'

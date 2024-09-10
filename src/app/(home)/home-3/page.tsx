@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import SectionSubscribe2 from '@/components/SectionSubscribe2'
 import BackgroundSection from '@/components/BackgroundSection'

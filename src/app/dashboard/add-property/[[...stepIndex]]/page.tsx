@@ -25,7 +25,7 @@ const Page = ({
   const queryParams = useSearchParams()
   const propertyId = queryParams.get('id')
 
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const [inputs, setInputs] = useState<object | any>(null)
 
   let ContentComponent = PageAddListing1

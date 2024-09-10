@@ -13,7 +13,7 @@ import { useTour } from '@reactour/tour'
 import userService from '@/service/user.service'
 
 const Page: FC<any> = () => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const searchParams = useSearchParams()
   const propertyName = searchParams.get('name')
   const propertyId = searchParams.get('property')

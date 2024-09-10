@@ -23,7 +23,7 @@ function Page({
 }) {
   const { push } = useRouter()
 
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const [inputs, setInputs] = useState<object | any>(null)
 
   let ContentComponent = PageAddListing1

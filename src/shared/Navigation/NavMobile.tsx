@@ -34,7 +34,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
   data = NAVIGATION_DEMO,
   onClickClose,
 }) => {
-  const userData = useAppSelector((state) => state?.userData.user)
+  const userData = useAppSelector((state: any) => state?.userData.user)
   const dispatch = useAppDispatch()
   const [isOpen, setIsOpen] = useState(false)
   const [isOpen1, setIsOpen1] = useState(false)

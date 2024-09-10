@@ -91,7 +91,7 @@ const DrawerContent: React.FC<DrawerContentProps> = ({
   setOfferings,
   offeringId,
 }) => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
 
   const [totalImages, setTotalImages] = useState<number[]>([])
   const [imageFields, setImageFields] = useState<string[]>([])

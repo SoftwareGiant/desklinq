@@ -22,7 +22,7 @@ const Page: FC<DashboardProps> = () => {
 
   const pathname = usePathname()
   const showComponent = pathname == '/dashboard/home'
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
   const analyticsRevenue: any[] = []
   let revenue: number = 0

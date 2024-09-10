@@ -25,10 +25,10 @@ const Contact: FC<ContactProps> = ({
   changePaymentOption,
   pricing,
 }) => {
-  const user = useAppSelector((state) => state.userData.user)
+  const user = useAppSelector((state: any) => state.userData.user)
   const router = useRouter()
   const userToken = useAppSelector(
-    (state) => state.userData.token.access?.token
+    (state: any) => state.userData.token.access?.token
   )
   const [alert, setAlert] = useState<{
     state: boolean

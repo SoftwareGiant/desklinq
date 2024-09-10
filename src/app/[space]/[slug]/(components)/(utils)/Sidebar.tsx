@@ -37,12 +37,12 @@ const Sidebar: FC<SidebarProps> = ({
   const filter = useAppSelector((state: any) => state.filter)
   const userData = useAppSelector((state: any) => state.userData.user)
   // const myToken = userData?.token?.access?.token
-  const userD = useAppSelector((state) => state.userData)
+  const userD = useAppSelector((state: any) => state.userData)
   const myToken = userD?.token?.access?.token
 
   // console.log(myToken);
   const userToken = useAppSelector(
-    (state) => state.userData.token.access?.token
+    (state: any) => state.userData.token.access?.token
   )
 
   const [startTime, setStartTime] = useState<string>(

@@ -16,7 +16,7 @@ interface Props {
 }
 
 const AvatarDropdown: FC<Props> = ({ className = '' }) => {
-  const userData = useAppSelector((state) => state?.userData.user)
+  const userData = useAppSelector((state: any) => state?.userData.user)
   const dispatch = useAppDispatch()
   const router = useRouter()
   const pathname = usePathname()

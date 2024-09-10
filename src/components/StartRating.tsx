@@ -14,7 +14,7 @@ const StartRating: FC<StartRatingProps> = ({
 }) => {
   let wholeStarCount = Math.floor(rating)
 
-  let stars = []
+  let stars: React.JSX.Element[] = []
 
   if (wholeStarCount) {
     for (let i = 0; i < wholeStarCount; i++) {

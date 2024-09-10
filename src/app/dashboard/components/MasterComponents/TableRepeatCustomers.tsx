@@ -6,7 +6,7 @@ import BaseCard from './BaseCard'
 export interface TableRepeatCustomersProps {}
 
 const TableRepeatCustomers: FC<TableRepeatCustomersProps> = () => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
 
   const [isLoading, setIsLoading] = useState(false)

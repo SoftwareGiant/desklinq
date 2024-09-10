@@ -8,7 +8,7 @@ export interface TableCancellationsPerPropertyProps {}
 const TableCancellationsPerProperty: FC<
   TableCancellationsPerPropertyProps
 > = () => {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
 
   const [isLoading, setIsLoading] = useState(false)

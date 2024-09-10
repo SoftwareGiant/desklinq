@@ -12,7 +12,7 @@ import { useAppSelector } from '@/redux/app/hooks'
 export interface AccountPageProps {}
 
 const AccountPage = () => {
-  const userData = useAppSelector((state) => state.userData.user)
+  const userData = useAppSelector((state: any) => state.userData.user)
 
   return (
     <div className="space-y-6 sm:space-y-8">

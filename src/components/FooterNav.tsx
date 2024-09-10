@@ -32,7 +32,7 @@ interface NavItem {
 const FooterNav = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
-  const userData = useAppSelector((state) => state.userData.user)
+  const userData = useAppSelector((state: any) => state.userData.user)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

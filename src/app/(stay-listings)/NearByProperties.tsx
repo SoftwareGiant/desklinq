@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, useEffect, useMemo, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import StayCard2 from '@/components/StayCard2'
 import { useAppDispatch, useAppSelector } from '@/redux/app/hooks'
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion'
@@ -76,12 +76,14 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = () => {
 
     const data = await res.json()
     const data1 = await res1.json()
-    const mergedData = []
-    const minLength = Math.min(data.data.length, data1.data.length)
+    const mergedData: any[] = []
+    const minLength = Math.min(data.data!.length, data1.data!.length)
+
     for (let i = 0; i < minLength; i++) {
-      mergedData.push(data.data[i])
-      mergedData.push(data1.data[i])
+      mergedData.push(data.data!)
+      mergedData.push(data1.data!)
     }
+
     const remainingData = data.data
       .slice(minLength)
       .concat(data1.data.slice(minLength))

@@ -39,7 +39,7 @@ const Master: FC<MasterProps> = () => {
 
   const pathname = usePathname()
   const showComponent = pathname == '/dashboard/master'
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
 
   // const getanAlyticsData = async () => {

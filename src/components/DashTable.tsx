@@ -18,7 +18,7 @@ import OfferingTable from './OfferingTable'
 import LoadingIndicator from '@/components/LoadingIndicator'
 
 export default function DashTable() {
-  const userData = useAppSelector((state) => state.userData)
+  const userData = useAppSelector((state: any) => state.userData)
   const myToken = userData?.token?.access?.token
 
   const [propertyData, setPropertyData] = useState<any[]>([])

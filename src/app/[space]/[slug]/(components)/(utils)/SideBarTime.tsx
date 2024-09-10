@@ -56,7 +56,7 @@ export const SideBarTime: FC<Props> = ({
   // console.log(start, end);
 
   const getTimeOptions = (disabledTimes: string[], duration: number) => {
-    const options = []
+    const options: any[] = []
     const now = new Date()
     const isToday = startDate
       ? startDate.toDateString() === now.toDateString()

@@ -1,3 +1,4 @@
+'use client'
 import React, { FC } from 'react'
 import rightImgPng from '@/images/benefit-img.jpg'
 import Image, { StaticImageData } from 'next/image'
