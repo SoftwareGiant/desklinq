@@ -1,8 +1,6 @@
-version: '3'
-
+name: desklinq
 services:
   app:
-  image: app
-  build: .
-  ports:
-  - "3000:3000"
+    build: .
+    ports:
+    - "3000:3000"

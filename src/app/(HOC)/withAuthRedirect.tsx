@@ -1,6 +1,7 @@
 'use client'
 
 import { useAppDispatch, useAppSelector } from '@/redux/app/hooks'
+import { RootState } from '@/redux/app/store'
 import {
   initialState,
   updateRedirectURL,
@@ -20,7 +21,7 @@ const withAuthRedirect = (
   const HocComponent = (props: any) => {
     const router = useRouter()
     const dispatch = useAppDispatch()
-    const userData = useAppSelector((state) => state.userData)
+    const userData = useAppSelector<RootState>((state: RootState) => state.userData)
     const pathname = usePathname()
 
     useEffect(() => {

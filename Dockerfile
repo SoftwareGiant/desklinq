@@ -1,25 +1,26 @@
-FROM node:20-alpine 
+FROM node:20.10 AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable && corepack install --global pnpm@8.9.2
+COPY . /app
+WORKDIR /app
 
-# Set the working directory inside the container  
-WORKDIR /app  
+FROM base AS prod-deps
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod
 
-# Copy package.json and package-lock.json to the container  
-COPY package*.json ./  
+FROM base AS build
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
+RUN pnpm run build
 
-# Install dependencies  
-RUN npm install  
+FROM base
+COPY --from=prod-deps /app/node_modules /app/node_modules
+COPY --from=build /app/.next /app/.next
+COPY --from=build /app/public /app/public
+COPY --from=build /app/next.config.js /app/next.config.js
 
-# Copy the app source code to the container  
-COPY . .  
+RUN addgroup -S nextapp && adduser -S nextapp -G nextapp
+RUN chown -R nextapp:nextapp /app
+USER nextapp
 
-# Development environment
-#RUN npm run dev
-
-# Build the Next.js app  
-RUN npm run build  
-
-# Expose the port the app will run on
-EXPOSE 3000  
-
-# Start the app  
-CMD ["npm", "start"] 
+EXPOSE 3000
+CMD [ "pnpm", "start" ]
