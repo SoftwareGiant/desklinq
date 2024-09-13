@@ -39,6 +39,7 @@ const StayCard2: FC<StayCard2Props> = (props) => {
     distance,
     AvailabilityStatus,
     slug,
+    isPopular,
   } = data
 
   const href = `/${type.toLowerCase().replace('_', '-')}/${slug}`
@@ -53,10 +54,12 @@ const StayCard2: FC<StayCard2Props> = (props) => {
           imageClass="rounded-md"
           href={href}
         />
-        <Badge
-          name="⭐ Most Popular"
-          className="absolute text-white text-sm left-0 top-0 rounded-sm rounded-tl-md bg-violet-800 "
-        />
+        {isPopular && (
+          <Badge
+            name="⭐ Most Popular"
+            className="absolute text-white text-sm left-0 top-0 rounded-sm rounded-tl-md bg-violet-800 "
+          />
+        )}
         <Badge
           name={`${Math.round((distance / 1000) * 10) / 10} Km away`}
           color="gray"

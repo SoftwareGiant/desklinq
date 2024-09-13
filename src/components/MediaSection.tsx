@@ -13,7 +13,7 @@ const MediaSection: FC<CategoriesProps> = ({ categories }) => {
     return <p>No categories available.</p> // Handle case where categories might be empty
   }
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container font-satoshi mx-auto px-4 py-8">
       <Heading desc=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt">
         The media has been talking about us!
       </Heading>

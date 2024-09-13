@@ -18,7 +18,72 @@ import MediaSection from '@/components/MediaSection'
 import TrustedBySection from '@/components/TrustedBySection'
 import CallToAction from '@/components/CallToAction'
 import OurValues from '@/components/OurValues'
+import logo1 from '../../public/images/trusted/logo1.svg'
+import logo2 from '../../public/images/trusted/logo2.svg'
+import logo3 from '../../public/images/trusted/logo3.svg'
+import logo4 from '../../public/images/trusted/logo4.svg'
+import logo5 from '../../public/images/trusted/logo5.svg'
 
+export const logos = [
+  { src: logo1, alt: 'Logo 1' },
+  { src: logo2, alt: 'Logo 2' },
+  { src: logo3, alt: 'Logo 3' },
+  { src: logo4, alt: 'Logo 4' },
+  { src: logo5, alt: 'Logo 5' },
+]
+const dummyLogoPartner: TaxonomyType[] = [
+  {
+    id: '1',
+    href: '/',
+    name: "Desklinq 'Workspace, On Demand' Streamlining Workspace Booking: Redefining Experience for Effortless Convenience",
+
+    desc: 'Unlocking the Future of Flexible Workspaces.The Next Era in Workspace Booking: Elevating Convenience in a Dynamic Industry. Embracing Seamless Online Reservations for Enhanced Flexibility.With a focus on real-time bookings, desklinq redefines',
+    logoUrl: 'dailyhunt',
+    logosrc: logo1,
+    taxonomy: 'category',
+  },
+  {
+    id: '0',
+    href: '/',
+    name: "Desklinq 'Workspace, On Demand' Streamlining Workspace Booking: Redefining Experience for Effortless Convenience",
+
+    desc: 'Unlocking the Future of Flexible Workspaces.The Next Era in Workspace Booking: Elevating Convenience in a Dynamic Industry. Embracing Seamless Online Reservations for Enhanced Flexibility.With a focus on real-time bookings, desklinq redefines',
+    logoUrl: 'outlook',
+    taxonomy: 'category',
+    logosrc: logo2,
+  },
+
+  {
+    logosrc: logo3,
+    id: '2',
+    href: '/',
+    name: 'Desklinq ‘Workspace, On Demand’ Streamlining Workspace Booking: Redefining Experience for Effortless Convenience ',
+
+    desc: 'The Next Era in Workspace Booking: Elevating Convenience in a Dynamic Industry. Embracing Seamless Online Reservations for Enhanced Flexibility.',
+    logoUrl: 'deccanBusiness',
+    taxonomy: 'category',
+  },
+  {
+    logosrc: logo4,
+    id: '7',
+    href: '/',
+    name: 'Desklinq ‘Workspace, On Demand’ Streamlining Workspace Booking: Redefining Experience for Effortless Convenience',
+
+    desc: 'The Next Era in Workspace Booking: Elevating Convenience in a Dynamic Industry. Embracing Seamless Online Reservations for Enhanced Flexibility.',
+    logoUrl: 'theStartupStory',
+    taxonomy: 'category',
+  },
+  {
+    logosrc: logo5,
+    id: '3',
+    href: '/',
+    name: 'Desklinq ‘Workspace, On Demand’ Streamlining Workspace Booking: Redefining Experience for Effortless Convenience',
+
+    desc: 'The Next Era in Workspace Booking: Elevating Convenience in a Dynamic Industry. Embracing Seamless Online Reservations for Enhanced Flexibility.',
+    logoUrl: 'wowentrepreneurs',
+    taxonomy: 'category',
+  },
+]
 const dummyData: TaxonomyType[] = [
   {
     id: '1',
@@ -129,46 +194,65 @@ function PageHome() {
     dispatch(updatePrimaryFilter({ coordinates: [77.5945627, 12.9715987] }))
   }, [])
   return (
-    <main className="nc-PageHome relative overflow-hidden">
+    <main className="nc-PageHome font-satoshi relative overflow-hidden">
       {/* GLASSMOPHIN */}
       <BgGlassmorphism />
       <div className="container py-3 px-1 sm:px-4 mb-24 ">
         <SectionHero3 className="" />
       </div>
-      <div className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
+      <div className=" bg-[#FAFAFC] relative space-y-24 mb-10 lg:space-y-28 lg:mb-28">
         <SectionHowItWork />
-        <ExploreSpace />
-        <SectionSliderNewCategories
+      </div>
+      <ExploreSpace />
+      <div className="bg-[#FAFAFC] relative md:px-40 md:py-10 space-y-24 mb-24 lg:space-y-28 lg:mb-28">
+        {/* <SectionSliderNewCategories
           heading="Explore by types of offerings"
           subHeading="Give wings to your dreams"
           categoryCardType="card5"
           itemPerRow={4}
-        />
-
-        <SectionSliderNewCategories
-          categories={Feature_cities}
-          itemPerRow={6}
-          maincategory="city"
-        />
-
-        <SectionOurFeatures />
-
+        /> */}
+        <div className="container mx-auto">
+          <SectionSliderNewCategories
+            categories={Feature_cities}
+            itemPerRow={6}
+            maincategory="city"
+          />
+        </div>
+        <div className=" bg-[#FAFAFC] relative space-y-24 mb-24 lg:space-y-28 lg:mb-28">
+          <SectionOurFeatures />
+        </div>
+        <OurValues />
         {/* <div className="relative py-8">
           <BackgroundSection />
           <SectionBecomeAnAuthor />
         </div> */}
-        <OurValues />
+      </div>
+      <div className="bg-[#FAFAFC] relative md:px-40 py-10 space-y-24 mb-24 lg:space-y-28 lg:mb-28">
         <SectionVideos />
-        <MediaSection categories={dummyData} />
-        {/* <SectionSliderNewCategories
+      </div>
+      <MediaSection categories={dummyData} />
+      {/* <SectionSliderNewCategories
           heading="The media is been talking about us!"
           categories={dummyData}
           subHeading=""
           categoryCardType="card7"
           itemPerRow={4}
         /> */}
-        <TrustedBySection />
-        <Faq page="main"/>
+      {/* <TrustedBySection /> */}
+
+      <div className="container pt-[100px] mx-auto">
+        <SectionSliderNewCategories
+          heading=""
+          categories={dummyLogoPartner}
+          subHeading="Our Workspaces are trusted by more than 25+ Startups"
+          categoryCardType="card7"
+          itemPerRow={4}
+        />
+      </div>
+      <div className="pt-[100px]">
+        <Faq page="main" />
+      </div>
+      <div className="py-[100px] ">
         <CallToAction />
       </div>
     </main>

@@ -26,10 +26,11 @@ module.exports = {
         "2xl": "128px",
       },
     },
-    // fontFamily: {
-    //   display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
-    //   body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
-    // },
+    fontFamily: {
+      satoshi: ['Satoshi', ...defaultTheme.fontFamily.sans], // Add Satoshi font
+      display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
+      body: ["var(--font-body)", ...defaultTheme.fontFamily.sans],
+    },
 
     extend: {
       colors: {

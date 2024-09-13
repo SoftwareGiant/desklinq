@@ -11,8 +11,10 @@ export interface CustomLink {
 
 //  ##########  PostDataType ######## //
 export interface TaxonomyType {
+  logosrc?: string | null; 
   id: string | number
   name: string
+
   href: Route<string>
   count?: number
   lat?: number | null

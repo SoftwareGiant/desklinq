@@ -45,8 +45,8 @@ const HeroSearchFormSmall: FC<HeroSearchFormSmallProps> = ({
   const renderTab = () => {
     return (
       <ul
-        className="h-[38px] flex justify-start  md:justify-center 
-    
+        className="h-[48px] flex justify-start  md:justify-center 
+    overflow-scroll md:overflow-visible
       "
       >
         {TABS.map((tab) => {

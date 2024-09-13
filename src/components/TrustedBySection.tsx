@@ -5,14 +5,15 @@ import logo3 from '../../public/images/trusted/logo3.svg'
 import logo4 from '../../public/images/trusted/logo4.svg'
 import logo5 from '../../public/images/trusted/logo5.svg'
 import Image from 'next/image'
+export const logos = [
+  { src: logo1, alt: 'Logo 1' },
+  { src: logo2, alt: 'Logo 2' },
+  { src: logo3, alt: 'Logo 3' },
+  { src: logo4, alt: 'Logo 4' },
+  { src: logo5, alt: 'Logo 5' },
+]
 const TrustedBySection: React.FC = () => {
-  const logos = [
-    { src: logo1, alt: 'Logo 1' },
-    { src: logo2, alt: 'Logo 2' },
-    { src: logo3, alt: 'Logo 3' },
-    { src: logo4, alt: 'Logo 4' },
-    { src: logo5, alt: 'Logo 5' },
-  ]
+
   return (
     <div className="trusted-by-section text-center py-8">
       <p className="text-lg mb-4">

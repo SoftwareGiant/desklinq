@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image'
 import space from '../../public/images/WCHIMG.png'
 import { TaxonomyType } from '@/data/types'
 import CardCategory5 from './CardCategory5'
+import Heading from '@/shared/Heading'
 interface Space {
   title: string
   image: StaticImageData
@@ -20,7 +21,7 @@ const ExploreSpace: React.FC = () => {
   const DEMO_CATS: TaxonomyType[] = [
     {
       id: '1',
-      href: '/listing-stay-map',
+      href: '/hot-desk',
       name: 'Hot desk',
       desc: 'Flexible workspace for the modern professional.',
       taxonomy: 'category',
@@ -134,15 +135,13 @@ const ExploreSpace: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="w-full m-auto my-10 gap-4 flex-col items-center flex justify-center">
-        <h3 className="md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold">
-          Explore Spaces
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt
-        </p>{' '}
-      </div>
+      <Heading
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt"
+        isCenter={true}
+      >
+        Explore Spaces
+      </Heading>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* {spaces.map((space, index) => (
@@ -164,7 +163,7 @@ const ExploreSpace: React.FC = () => {
           </div>
         ))} */}
         {DEMO_CATS.map((space, index) => (
-          <CardCategory5 taxonomy={space} />
+          <CardCategory5 heading='' taxonomy={space} />
         ))}
       </div>
     </div>

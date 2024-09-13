@@ -38,8 +38,8 @@ const values = [
 
 const OurValues: React.FC = () => {
   return (
-    <div>
-      <div className="max-w-6xl mx-auto py-16 px-8">
+    <div className='container mx-auto'>
+      <div className="container w-full  py-16 ">
         <h2 className="text-3xl font-bold text-center mb-4">Our Values</h2>
         <p className="text-center text-gray-600 mb-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -61,7 +61,7 @@ const OurValues: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto    bg-[#FAFAFC] shadow-md rounded-lg p-2 lg:p-8 lg:pr-0 lg:pb-0 flex flex-col lg:flex-row">
+      <div className="w-full container mx-auto    bg-[#FAFAFC] shadow-md rounded-lg p-2 lg:p-8 lg:pr-0 lg:pb-0 flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 p-4 lg:px-16">
           <h2 className="text-2xl font-bold mb-4 text-black">
             Some Insights that drives us

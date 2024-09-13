@@ -39,7 +39,7 @@ export default async function Page({ params }: Props) {
             <div className="w-full lg:w-3/5 xl:w-2/3 space-y-8 lg:space-y-10 lg:pr-10">
               <HeroSection offerings={Offering} />
               <PricingSection pricing={Offering?.pricing} />
-              <div className="max-w-6xl mx-auto    bg-[#FAFAFC] shadow-md rounded-lg p-2 flex flex-col lg:flex-row">
+              <div className="max-w-6xl mx-2    bg-[#FAFAFC] shadow-md rounded-lg p-2 flex flex-col lg:flex-row">
                 <div className="w-full lg:w-1/2 p-4 lg:px-4">
                   <h2 className="text-2xl font-bold mb-4 text-black">
                     Visit our Property!
@@ -89,7 +89,7 @@ export default async function Page({ params }: Props) {
             </div>
           </main>
           <div className="relative py-16">
-            <Faq page="" />
+          <Faq page="main"/>
             <div className="py-8">
               <CallToAction />
             </div>

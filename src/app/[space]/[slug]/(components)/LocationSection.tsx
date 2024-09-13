@@ -10,15 +10,15 @@ interface Props {
 
 const LocationSection: FC<Props> = ({ address }) => {
   return (
-    <div className="listingSection__wrap">
+    <div className=" flex flex-col gap-4">
       <div>
         <h2 className="text-2xl font-semibold">Location</h2>
         <span className="block mt-2 text-neutral-500 dark:text-neutral-400">
-          {address?.houseNumber + `,`} {address?.city},{address?.state},{' '}
-          {address?.country},{address?.pin}
+          {address?.houseNumber && address?.houseNumber + `,`} {address?.city},
+          {address?.state}, {address?.country},{address?.pin && address?.pin}
         </span>
       </div>
-      <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+
       <div className="aspect-w-5 aspect-h-5 sm:aspect-h-3 ring-1 ring-black/10 rounded-xl z-0">
         <div className="rounded-xl overflow-hidden z-0">
           {address.location.coordinates && (

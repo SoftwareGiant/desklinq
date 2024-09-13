@@ -72,6 +72,7 @@ export interface OpeningHoursType {
 }
 
 export interface offeringsListingType {
+  isPopular?:boolean
   _id: string
   type: string
   name: string

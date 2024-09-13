@@ -70,18 +70,22 @@ const Footer: React.FC = () => {
     )
   }
   return (
-    <footer className="bg-black text-white py-10">
+    <footer className="bg-black font-satoshi text-white py-10">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap flex-col lg:flex-row  justify-between">
           {/* Logo and Address */}
-          <div className="w-full md:w-1/4 mb-6">
+          <div className="w-full lg:w-1/4 mb-6">
             <a href="/">
-              <Image src={logo_light} alt="Desklinq Logo" width={150} />
+              <Image
+                src={logo_light}
+                alt="Desklinq Logo"
+                className="h-[21px] w-[132px]"
+              />
               {/* Replace with actual logo path */}
             </a>
             <p className="mt-4">Address</p>
             <p>(248) 823-3200</p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-8">
               {/* Social Icons */}
 
               <SocialsList1 className="flex items-center gap-2" />
@@ -89,11 +93,11 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Links */}
-          <div className="w-full md:w-3/4 flex flex-wrap">
-            <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
+          <div className="w-full   lg:w-3/4 flex flex-wrap">
+            <div className="w-1/2 lg:w-1/4 mb-6">
               <ul>
                 <li className="mb-2">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="hover:underline font-semibold">
                     Company
                   </a>
                 </li>
@@ -125,10 +129,10 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <div className="w-1/2 lg:w-1/4 mb-6">
               <ul>
                 <li className="mb-2">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="hover:underline font-semibold">
                     Resource
                   </a>
                 </li>
@@ -160,10 +164,10 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <div className="w-1/2 lg:w-1/4 mb-6">
               <ul>
                 <li className="mb-2">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="hover:underline font-semibold">
                     Career
                   </a>
                 </li>
@@ -190,10 +194,10 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <div className="w-1/2 lg:w-1/4 mb-6">
               <ul>
                 <li className="mb-2">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="hover:underline font-semibold">
                     Help
                   </a>
                 </li>
@@ -219,7 +223,7 @@ const Footer: React.FC = () => {
 
         <hr className="border-gray-700 my-6" />
 
-        <div className="flex flex-wrap justify-between text-sm">
+        <div className="flex text-[#969696] flex-wrap gap-4 justify-between text-sm">
           <p>© Copyright 2024, Desklinq All Rights Reserved</p>
           <div className="flex space-x-4">
             <a href="#" className="hover:underline">

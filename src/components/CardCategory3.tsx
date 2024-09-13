@@ -54,17 +54,17 @@ const CardCategory3: FC<CardCategory3Props> = ({
       href={href as Route}
       className={`nc-CardCategory3 flex flex-col ${className}`}
     >
-      <div className="border rounded-lg p-4  w-44 shadow-sm">
+      <div className="border rounded-lg p-4 bg-[#E0DEF7] w-44 shadow-sm">
         <div className="flex justify-start mb-4">
           <Image
             src={thumbnail || ''}
             alt="Bengaluru"
-            width={64}
-            height={64}
+            width={100}
+            height={100}
             className="text-[#6115E7]"
           />
         </div>
-        <div className="text-lg font-semibold text-gray-800 mb-1">{name}</div>
+        <div className="text-lg font-bold text-gray-800 mb-1">{name}</div>
         <div className="text-gray-500 flex items-center">
           {convertNumbThousand(count || 0)} properties
           <ArrowForwardOutlinedIcon className="ml-2 text-gray-800" />

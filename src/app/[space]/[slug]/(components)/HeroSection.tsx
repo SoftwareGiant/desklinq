@@ -71,8 +71,8 @@ const HeroSection: FC<Props> = ({ offerings }) => {
         {/* About Section */}
 
         <section>
-          <h2 className="text-xl mb-2 font-semibold">About</h2>
-          <p className="text-neutral-6000 dark:text-neutral-30 text-sm">
+          <h2 className="text-xl  mb-2 font-semibold">About</h2>
+          <p className="text-neutral-6000 font-satoshi dark:text-neutral-30 text-sm  ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -89,8 +89,8 @@ const HeroSection: FC<Props> = ({ offerings }) => {
         {/* Open Hours Section */}
         <section className="mt-4">
           <h3 className="text-base mb-2 font-semibold">Open Hours</h3>
-          <div className="flex text-neutral-6000 text-sm dark:text-neutral-30 space-x-8 ">
-            <div className="flex items-center space-x-2">
+          <div className="flex flex-col font-satoshi lg:flex-row text-neutral-6000 text-sm dark:text-neutral-30 gap-2 lg:gap-0 lg:pace-x-8 ">
+            <div className="flex items-center  space-x-2">
               <Clock size={24} />
               <span>Mon - Fri: 8:00AM - 9:00PM</span>
             </div>

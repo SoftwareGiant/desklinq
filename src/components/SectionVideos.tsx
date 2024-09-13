@@ -100,7 +100,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
     if (index === currentVideo) return null
     return (
       <div
-        className="group relative aspect-h-16 aspect-w-16 rounded-md cursor-pointer overflow-hidden sm:aspect-h-12 lg:aspect-h-9 "
+        className="group  relative aspect-h-16 aspect-w-16 rounded-md cursor-pointer overflow-hidden sm:aspect-h-12 lg:aspect-h-9 "
         onClick={() => {
           setCurrentVideo(index)
           !isPlay && setIsPlay(true)
@@ -126,7 +126,7 @@ const SectionVideos: FC<SectionVideosProps> = ({
   }
 
   return (
-    <div className={`nc-SectionVideos ${className}`}>
+    <div className={`nc-SectionVideos ${className} container`}>
       <Heading
         desc="Check out our virtual tours videos. View more and share more new
           perspectives on just about any topic. Everyone’s welcome."

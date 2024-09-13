@@ -34,11 +34,13 @@ import {
 export interface CardCategory5Props {
   className?: string
   taxonomy: TaxonomyType
+  heading: string
 }
 
 const CardCategory5: FC<CardCategory5Props> = ({
   className = '',
   taxonomy,
+  heading,
 }) => {
   const {
     count,
@@ -148,21 +150,23 @@ const CardCategory5: FC<CardCategory5Props> = ({
         />
         <span className="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
       </div>
-      <div className="mt-4 px-3 truncate text-center">
-        <h2
-          className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
-        >
-          {name}
-        </h2>
-        <span className="block mt-2 text-neutral-500 dark:text-neutral-400 whitespace-normal">
-          {desc}
-        </span>
-        <span
-          className={`block mt-2 text-sm text-neutral-6000 dark:text-neutral-400`}
-        >
-          {convertNumbThousand(count)} properties
-        </span>
-      </div>
+      {heading!=='' && heading !== 'Explore by types of offerings'  && (
+        <div className="mt-4 px-3 truncate text-center">
+          <h2
+            className={`text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate`}
+          >
+            {name}
+          </h2>
+          <span className="block mt-2 text-neutral-500 dark:text-neutral-400 whitespace-normal">
+            {desc}
+          </span>
+          <span
+            className={`block mt-2 text-sm text-neutral-6000 dark:text-neutral-400`}
+          >
+            {convertNumbThousand(count)} properties
+          </span>
+        </div>
+      )}
     </Link>
   )
 }

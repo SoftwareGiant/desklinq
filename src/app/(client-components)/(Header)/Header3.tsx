@@ -216,7 +216,7 @@ const Header3: FC<Header3Props> = ({ className = '' }) => {
               </div>
             </div> */}
 
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-7">
               <div className="relative">
                 {/* Trigger Button */}
                 <button
@@ -254,13 +254,22 @@ const Header3: FC<Header3Props> = ({ className = '' }) => {
                 >
                   <ul className="py-2">
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Hot Desks
+                      <a href="/hot-desk" className="block w-full h-full">
+                        Hot Desks
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Meeting Rooms
+                      <a href="/listing-stay-map" className="block w-full h-full">
+                        Meeting Rooms
+                      </a>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                      Co-working Spaces
+                      <a
+                        href="/listing-stay-map"
+                        className="block w-full h-full"
+                      >
+                        Co-working Spaces
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -312,9 +321,11 @@ const Header3: FC<Header3Props> = ({ className = '' }) => {
 
               <Link href="#">About us</Link>
               <Link href="#">Contact Us</Link>
-              <button className="px-6 py-3 lg:px-6 lg:py-3 rounded-xl border border-gray-500">
-                Log In
-              </button>
+              <a href="https://desklinq.com/auth/login?callbackUrl=/dashboard/home">
+                <button className="px-6 py-3 lg:px-6 lg:py-3 rounded-xl border border-gray-500">
+                  Log In
+                </button>{' '}
+              </a>
 
               <ButtonPrimary
                 // onClick={() => dispatch({ type: 'show' })}

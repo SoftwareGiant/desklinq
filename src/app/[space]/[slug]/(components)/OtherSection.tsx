@@ -10,12 +10,12 @@ const OtherSection: FC<Props> = ({ offerings }) => {
   if (!additionalInfo) return null
 
   return (
-    <div className="listingSection__wrap">
+    <div className="flex flex-col gap-2">
       <h2 className="text-2xl font-semibold">
         {additionalInfo.title || 'Things to Know'}
       </h2>
-      <div className="flex flex-col gap-3 border shadow-md rounded-lg p-4">
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+      <div className="flex flex-col gap-3 border shadow-md rounded-lg px-6 py-4">
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
         <div>
           <h4 className="text-lg font-semibold">
             {additionalInfo?.rules?.title || 'Rules'}
@@ -28,7 +28,7 @@ const OtherSection: FC<Props> = ({ offerings }) => {
             ))}
           </ul>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
         <div>
           <h4 className="text-lg font-semibold">
             {additionalInfo?.cancellationPolicy?.title || 'Cancellation Policy'}
@@ -41,7 +41,7 @@ const OtherSection: FC<Props> = ({ offerings }) => {
             ))}
           </span>
         </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" />
+        {/* <div className="w-14 border-b border-neutral-200 dark:border-neutral-700" /> */}
         <div>
           <h4 className="text-lg font-semibold">
             {additionalInfo?.specialNote?.title || 'Special Note'}

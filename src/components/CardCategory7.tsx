@@ -19,7 +19,7 @@ const CardCategory7: FC<CardCategory7Props> = ({
   className = '',
   taxonomy,
 }) => {
-  const { name, logoUrl, readMoreUrl, desc = '' } = taxonomy
+  const { name, logoUrl, logosrc, readMoreUrl, desc = '' } = taxonomy
   const [truncatedName, setTruncatedName] = useState('')
   const [truncatedDesc, setTruncatedDesc] = useState('')
 
@@ -63,9 +63,13 @@ const CardCategory7: FC<CardCategory7Props> = ({
     // <div className="max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
 
     <Link href={readMoreUrl || '#'} passHref={true} target="_blank">
-      <div className="bg-white h-[12vh] relative p-[1vw] mx-[1vw] mt-[1.5vh] rounded-md border border-gray-400 shadow-lg dark:bg-gray-800 dark:border-gray-700">
+      <div
+        className={`bg-white h-[12vh] relative p-[1vw] mx-[1vw] mt-[1.5vh] rounded-md ${
+          logosrc ? '' : 'border shadow-lg'
+        }  border-gray-400  dark:bg-gray-800 dark:border-gray-700`}
+      >
         <Image
-          src={getImage(logoUrl || '')}
+          src={logosrc ? logosrc : getImage(logoUrl || '')}
           alt="Logo"
           className="object-contain rounded-lg"
           style={{ width: '100%', height: '100%' }}

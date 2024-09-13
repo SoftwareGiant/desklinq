@@ -193,7 +193,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = ({ params }) => {
             </button>
           ))}
         </div> */}
-        <div className="top-[300px] w-full lg:w-[800px] left-0 right-0 z-10 m-auto">
+        <div className="top-[300px] w-full lg:w-[800px] left-0 right-0 z-10 m-auto ">
           <HeroSearchFormSmall />
         </div>
         {/* <Heading2
@@ -324,7 +324,7 @@ const SectionGridHasMap: FC<SectionGridHasMapProps> = ({ params }) => {
       </div>
 
       <div className="relative py-16">
-        <Faq page="" />
+        <Faq page="main" />
         <div className="py-8">
           <CallToAction />
         </div>

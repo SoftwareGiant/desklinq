@@ -10,7 +10,7 @@ interface Props {
 
 const PricingSection: FC<Props> = ({ pricing }) => {
   return (
-    <div className="listingSection__wrap">
+    <section className="max-w-6xl mx-auto     p-2 flex flex-col ">
       {/* <div>
         <h2 className="text-2xl font-semibold">Pricing Plans</h2>
       </div>
@@ -34,82 +34,77 @@ const PricingSection: FC<Props> = ({ pricing }) => {
         </div>
       </div> */}
 
-      <section className="my-6 mt-8">
-        <h2 className="text-xl mb-2 font-semibold">Pricing Options</h2>
-        <p>
-          Our flexible pricing option allows you to book spaces on a
-          <span className="text-indigo-600 font-medium cursor-pointer">
-            {' '}
-            monthly{' '}
-          </span>
-          or
-          <span className="text-indigo-600 font-medium cursor-pointer">
-            {' '}
-            yearly{' '}
-          </span>
-          basis.
-        </p>
+      <h2 className="text-xl mb-2 font-semibold">Pricing Options</h2>
+      <p>
+        Our flexible pricing option allows you to book spaces on a
+        <span className="text-indigo-600 font-medium cursor-pointer">
+          {' '}
+          monthly{' '}
+        </span>
+        or
+        <span className="text-indigo-600 font-medium cursor-pointer">
+          {' '}
+          yearly{' '}
+        </span>
+        basis.
+      </p>
 
-        {/* Pricing Cards */}
-        <div className="border text-sm border-gray-200 rounded-lg shadow-sm mt-6 p-6">
-          <div className="space-y-8">
-            {/* Hot Desks */}
-            <div className="flex justify-between items-center">
-              <div>
-                <h3 className=" font-semibold">Hot Desks</h3>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-500">starts @ ₹499</span>
-                <a
-                  href="#"
-                  className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
-                >
-                  <span>Book now</span>
-                  <ArrowRight size={20} />
-                </a>
-              </div>
+      {/* Pricing Cards */}
+      <div className="border text-sm border-gray-200 rounded-lg shadow-sm mt-6 p-6">
+        <div className="space-y-8">
+          {/* Hot Desks */}
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className=" font-semibold">Hot Desks</h3>
             </div>
-
-            {/* Meetings Room */}
-            <div className="flex justify-between items-center">
-              <div>
-                <h3 className=" font-semibold">
-                  Meetings Room{' '}
-                  <span className="text-sm text-gray-500">(8 Seater)</span>
-                </h3>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-500">starts @ ₹2999</span>
-                <a
-                  href="#"
-                  className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
-                >
-                  <span>Book now</span>
-                  <ArrowRight size={20} />
-                </a>
-              </div>
+            <div className="flex flex-col lg:flex-row items-center lg:space-x-2">
+              <span className="text-gray-500">starts @ ₹499</span>
+              <a
+                href="#"
+                className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
+              >
+                <span>Book now</span>
+                <ArrowRight size={20} />
+              </a>
             </div>
+          </div>
 
-            {/* Virtual Office */}
-            <div className="flex justify-between items-center">
-              <div>
-                <h3 className=" font-semibold">Virtual Office</h3>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-gray-500">starts @ ₹299</span>
-                <a
-                  href="#"
-                  className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
-                >
-                  <span>Book now</span>
-                  <ArrowRight size={20} />
-                </a>
-              </div>
+          {/* Meetings Room */}
+          <div className="flex justify-between items-center ">
+            <div>
+              <h3 className=" font-semibold">Meetings Room </h3>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center lg:space-x-2">
+              <span className="text-gray-500">starts @ ₹2999</span>
+              <a
+                href="#"
+                className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
+              >
+                <span>Book now</span>
+                <ArrowRight size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Virtual Office */}
+          <div className="flex justify-between items-center">
+            <div>
+              <h3 className=" font-semibold">Virtual Office</h3>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center lg:space-x-2">
+              <span className="text-gray-500">starts @ ₹299</span>
+              <a
+                href="#"
+                className="text-indigo-600 font-bold underline text-sm  flex items-center space-x-1"
+              >
+                <span>Book now</span>
+                <ArrowRight size={20} />
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
 

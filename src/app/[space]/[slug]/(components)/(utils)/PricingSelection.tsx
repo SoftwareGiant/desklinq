@@ -42,7 +42,7 @@ const PricingSelection: FC<Props> = ({ pricing, onChange }) => {
               <span className="font-semibold  text-black"> Booking Type</span>
 
               <Listbox.Button className="relative text-[#6115E7] text-sm  items-center gap-4 flex flex-row rounded-lg focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white  cursor-pointer dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 ">
-                <span className="w-[24px] relative ">
+                <span className=" relative ">
                   {selected?.duration ||
                     (pricing && pricing[0] && pricing[0].duration) ||
                     'HOURLY'}

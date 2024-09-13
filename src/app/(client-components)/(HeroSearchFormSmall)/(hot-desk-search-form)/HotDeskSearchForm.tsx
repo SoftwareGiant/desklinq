@@ -22,7 +22,7 @@ const HotDeskSearchForm: FC<HotDeskSearchFormProps> = ({
           autoFocus={defaultFieldFocus === 'location'}
         />
         {/* <div className="hidden lg:block self-center border-r border-slate-200 dark:border-slate-700 h-8"></div> */}
-        <DatesRangeInput className="lg:flex-[1.2]" />
+        <DatesRangeInput className="lg:flex-[1.2]  " />
 
         {/* <div className="hidden lg:block self-center border-r border-slate-200 dark:border-slate-700 h-8"></div> */}
         <GuestsInput
@@ -31,7 +31,10 @@ const HotDeskSearchForm: FC<HotDeskSearchFormProps> = ({
           submitLink={'/listing-stay-map' as Route}
         />
         <div className="pr-2">
-          <ButtonSubmit href={'/listing-stay-map' as Route} />
+          <ButtonSubmit
+            className="max-w-[153px]"
+            href={'/listing-stay-map' as Route}
+          />
         </div>
       </form>
     )

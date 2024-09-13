@@ -112,10 +112,10 @@ const SideBarSection: FC<Props> = ({ offering, openingHours, device }) => {
             id="default-modal"
             tabIndex={-1}
             aria-hidden="true"
-            className="overflow-y-auto pt-20 overflow-x-hidden fixed top-0 right-0 left-0 z-100  justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            className="overflow-y-auto bg-white pt-20 overflow-x-hidden fixed top-0 right-0 left-0 z-100  justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
           >
-            <div className="relative p-4 w-full max-w-2xl max-h-full">
-              <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div className="relative lg:p-4 w-full  h-full">
+              <div className="relative bg-white h-full rounded-lg shadow dark:bg-gray-700">
                 <div className="flex items-center justify-between md:p-5 border-b rounded-t dark:border-gray-600">
                   <button
                     type="button"
@@ -140,7 +140,7 @@ const SideBarSection: FC<Props> = ({ offering, openingHours, device }) => {
                     <span className="sr-only">Close</span>
                   </button>
                 </div>
-                <div className="p-4 md:p-5 space-y-4">
+                <div className="p-0 md:p-5 space-y-4">
                   <Sidebar
                     offering={offering}
                     dateArray={dateArray}

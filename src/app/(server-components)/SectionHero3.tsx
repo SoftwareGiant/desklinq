@@ -11,6 +11,7 @@ import { Armchair, Laptop, WifiHigh, UsersThree } from 'phosphor-react'
 import HeroSearchFormSmall from '../(client-components)/(HeroSearchFormSmall)/HeroSearchFormSmall'
 import { useSwipeable } from 'react-swipeable'
 import SwiperGallery from './SwiperGallery'
+import SectionSliderNewCategories from '@/components/SectionSliderNewCategories'
 
 export interface SectionHero3Props {
   className?: string
@@ -148,7 +149,7 @@ const SectionHero3: FC<SectionHero3Props> = ({ className = '' }) => {
     //   </div>
     // </div>
 
-    <div className="relative w-full h-full min-h-screen overflow-hidden">
+    <div className="relative w-full h-full lg:max-h-screen ">
       <div
         className="hidden lg:block  lg:relative   -z-30 "
         style={{
@@ -190,13 +191,19 @@ const SectionHero3: FC<SectionHero3Props> = ({ className = '' }) => {
         </div>
       </div>
       {/* Add your hero content here */}
+      <div className="flex lg:hidden px-2 items-center">
+        <button className="bg-[#6115E7] text-white font-bold py-1 px-3 text-sm rounded-full">
+          NEW
+        </button>
+        <p className="ml-2 text-sm">Book a Hot seats with our Daily Passes</p>
+      </div>
       <div className="relative lg:absolute top-0 w-full  z-10 m-auto">
-        <div className="text-center max-w-[700px] m-auto lg:mt-20 p-8">
-          <h1 className="text-5xl text-start lg:text-center font-bold ">
+        <div className="text-center max-w-[700px] m-auto lg:mt-20 p-4 lg:p-8">
+          <h1 className=" text-3xl lg:text-5xl text-start lg:text-center font-bold ">
             {' '}
             Find Your Perfect Working Spot
           </h1>
-          <p className="mt-4 text-lg text-start lg:text-center text-gray-700">
+          <p className="mt-4 text-sm lg:text-lg text-start lg:text-center text-gray-700">
             Located in traditional office buildings, these modern offices with
             meeting rooms can be booked by the day - and in less than a minute!
           </p>
@@ -238,7 +245,13 @@ const SectionHero3: FC<SectionHero3Props> = ({ className = '' }) => {
       </div> */}
 
       <div className="static lg:absolute mt-4 lg:mt-0 lg:top-[470px] left-0 right-0 ">
-        <SwiperGallery />
+        {/* <SwiperGallery /> */}
+        <SectionSliderNewCategories
+          heading=""
+          subHeading=""
+          categoryCardType="card5"
+          itemPerRow={4}
+        />
       </div>
     </div>
   )

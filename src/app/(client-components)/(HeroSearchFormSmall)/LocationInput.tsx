@@ -111,10 +111,10 @@ const LocationInput: FC<LocationInputProps> = ({
   }
 
   return (
-    <div className={`relative flex ${className}`} ref={containerRef}>
+    <div className={`relative flex lg:flex-1 ${className}`} ref={containerRef}>
       <div
         onClick={() => setShowPopover(true)}
-        className={`flex lg:flex-1 relative z-10 [ nc-hero-field-padding--small ] flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left ${
+        className={`flex  flex-1 relative z-10 [ nc-hero-field-padding--small ] flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left ${
           showPopover ? 'nc-hero-field-focused--2' : ''
         }`}
       >
@@ -143,7 +143,7 @@ const LocationInput: FC<LocationInputProps> = ({
                   })}
                 />
                 {showPopover && (
-                  <div className="absolute left-0 z-40 w-full min-w-[300px] sm:min-w-[400px] bg-white dark:bg-neutral-800 top-full mt-3 py-3 sm:py-5 rounded-3xl shadow-xl max-h-96 overflow-y-auto">
+                  <div className="absolute left-0 right-0 z-40 w-full min-w-[300px]  bg-white dark:bg-neutral-800 top-full mt-3 py-3 sm:py-5 rounded-3xl shadow-xl max-h-96 overflow-y-auto">
                     <div
                       className="flex px-4 sm:px-6 items-center space-x-3 py-4 hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer"
                       onClick={LocationGetter}
