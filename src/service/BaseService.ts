@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestHeaders } from 'axios'
+import axios, { AxiosResponse, AxiosRequestHeaders, AxiosHeaders } from 'axios'
 
 class BaseService {
   // Axios instance for making requests
@@ -14,22 +14,24 @@ class BaseService {
     return token
   }
   // create a getHeaders method to return the headers
-  // create a getHeaders method to return the headers
   getHeaders(): AxiosRequestHeaders {
     const token = this.getToken()
     let parsedToken: any | null = null
+
     try {
       parsedToken = token ? JSON.parse(token) : null
     } catch (error) {
       console.error('Error parsing token:', error)
     }
 
-    const accessToken = parsedToken ? parsedToken.access.token : null
+    const accessToken: string = parsedToken ? parsedToken.access.token : null
 
-    let headers: AxiosRequestHeaders = {}
+    let headers: AxiosRequestHeaders = new AxiosHeaders()
+
     if (accessToken) {
-      headers['Authorization'] = `Bearer ${accessToken}`
+      headers.set('Authorization', `Bearer ${accessToken}`)
     }
+
     return headers
   }
 
