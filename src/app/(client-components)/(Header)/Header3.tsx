@@ -302,7 +302,10 @@ const Header3: FC<Header3Props> = ({ className = '' }) => {
                 >
                   <ul className="py-2 ">
                     {cityList.map((city) => (
-                      <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      <li
+                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                        key={city}
+                      >
                         {city}
                       </li>
                     ))}

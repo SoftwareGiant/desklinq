@@ -6,7 +6,7 @@ import ListingImageGallery, {
 } from '@/components/listing-image-gallery/ListingImageGallery'
 import SectionSliderNewCategories from '@/components/SectionSliderNewCategories'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { FC, ReactNode, Suspense, useEffect, useState } from 'react'
 import MobileFooterSticky from './(components)/MobileFooterSticky'
 import { Route } from 'next'
 import userService from '@/service/user.service'
@@ -85,4 +85,11 @@ const DetailtLayout = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default DetailtLayout
+const SuspenseWrappedDetailLayout: FC<any> = (props) => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <DetailtLayout {...props}>{props.children}</DetailtLayout>
+  </Suspense>
+)
+
+// export default DetailtLayout
+export default SuspenseWrappedDetailLayout

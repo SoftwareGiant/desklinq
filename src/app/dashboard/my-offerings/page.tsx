@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, Fragment, useState, useEffect } from 'react'
+import React, { FC, Fragment, useState, useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Transition, Dialog } from '@headlessui/react'
 import ListingCard from '../components/ListingCard'
@@ -212,4 +212,10 @@ const Page: FC<any> = () => {
   )
 }
 
-export default Page
+const SuspenseWrappedPage: FC<any> = (props) => (
+  <Suspense fallback={<div>Loading....</div>}>
+    <Page {...props} />
+  </Suspense>
+)
+
+export default SuspenseWrappedPage
