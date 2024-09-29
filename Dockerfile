@@ -7,8 +7,7 @@ COPY . /app
 WORKDIR /app
 
 FROM base AS prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod 
-# --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
 FROM base AS build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
@@ -21,6 +20,7 @@ RUN groupadd --gid 10001 nextapp && useradd --uid 10001 -g nextapp -m nextapp
 RUN chown -R nextapp:nextapp /app
 
 COPY --from=prod-deps /app/node_modules /app/node_modules
+# COPY --from=build --chown=nextapp:nextapp /app/pnpm-lock.yaml /app/pnpm-lock.yaml
 COPY --from=build --chown=nextapp:nextapp /app/.next /app/.next
 COPY --from=build --chown=nextapp:nextapp /app/public /app/public
 COPY --from=build --chown=nextapp:nextapp /app/next.config.js /app/next.config.js
